@@ -120,4 +120,28 @@ public class Endereco {
     public void setSiafi(String siafi) {
         this.siafi = siafi;
     }
+
+    public void exibirDsdos() {
+        System.out.println("===== DADOS DO ENDEREÇO =====");
+        System.out.println("CEP: " + cep);
+        System.out.println("Logradouro: " + logradouro);
+        System.out.println("Complemento: " + complemento);
+        System.out.println("Unidade: " + unidade);
+        System.out.println("Bairro: " + bairro);
+        System.out.println("Cidade: " + localidade);
+        System.out.println("UF: " + uf);
+        System.out.println("Estado: " + estado);
+        System.out.println("Região: " + regiao);
+        System.out.println("IBGE: " + ibge);
+        System.out.println("GIA: " + gia);
+        System.out.println("DDD: " + ddd);
+        System.out.println("SIAFI: " + siafi);
+        System.out.println("============================");
+    }
+
+
+    public String toString() {
+        return "Cep: " + cep+ '\'' +
+                ", Endereco: " + logradouro +'\'';
+    }
 }
