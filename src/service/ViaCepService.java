@@ -26,11 +26,17 @@ public class ViaCepService {
 
             String json = response.body();
 
-            Gson gson = new GsonBuilder().create();
-            return gson.fromJson(json, Endereco.class);
+            Gson gson = new Gson();
+            Endereco endereco = gson.fromJson(response.body(), Endereco.class);
+
+            if (endereco.isErro()) {
+                return null;
+            }
+
+            return endereco;
 
         } catch (Exception e) {
-            System.out.println("Erro ao buscar o CEP.");
+            System.out.println("Erro ao buscar o CEP: " + e.getMessage());
             return null;
         }
     }

@@ -59,21 +59,10 @@ public class Endereco {
                 ===== ENDEREÇO =====
                 CEP: %s
                 Logradouro: %s
-                Bairro: %s
-                Cidade: %s - %s
-                Estado: %s
-                Região: %s
-                DDD: %s
                 ====================
                 """.formatted(
                 cep,
-                logradouro,
-                bairro,
-                localidade,
-                uf,
-                estado,
-                regiao,
-                ddd
+                logradouro
         );
     }
 }
